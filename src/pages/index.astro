@@ -1,15 +1,218 @@
 ---
+import Layaout from "../components/Layaout/Layaout.astro";
+import Banner from "../components/Banner.astro";
+import MVVCard from "../components/MVVCard.astro";
+import ServiceCard from "../components/ServiceCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+    /* todo ABOUT US STYLE */
+
+    .btn {
+        border: 1px solid var(--color1);
+        transition: all 100ms ease-in-out;
+        color: var(--color1);
+    }
+
+    .btn:hover {
+        background: var(--color1);
+        color: #fff;
+    }
+
+    .acerca-de {
+        width: 100%;
+        min-height: 100vh;
+        margin-bottom: 100px;
+    }
+    .acerca-de .container h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        color: var(--color1);
+    }
+
+    .acerca-de .container h2::after,
+    .services-content h2::after {
+        content: "";
+        position: relative;
+        top: 8px;
+        right: 0;
+        width: 10%;
+        height: 3px;
+        background: var(--color1);
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        gap: 30px;
+    }
+
+    .acerca-de .sobre-nosotros-container .sobre-nosotros-sec1 .imgsbox {
+        position: relative;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox1,
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.274);
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox1 {
+        width: 70%;
+        height: 80%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.274);
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox2 {
+        width: 60%;
+        height: 70%;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        z-index: 2000;
+        box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.397);
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox1 img,
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox2 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        object-fit: cover;
+
+        transition: all 500ms ease;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .content h3 {
+        margin-bottom: 25px;
+        color: var(--color1);
+        font-size: 20px;
+        word-spacing: 2px;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .content p {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox1:hover img,
+    .acerca-de .sobre-nosotros-sec1 .imgsbox .imgBox2:hover img {
+        transform: scale(1.5);
+        filter: blur(2px);
+    }
+
+    /* estilos servicios y productos */
+
+    .services-content {
+        background: var(--color4);
+        padding-top: 40px;
+    }
+    .services-products-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 0 20px;
+    }
+
+    .services-products-content .img-box {
+        height: 100%;
+    }
+
+    .services-products-content .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<Layaout>
+    <Banner />
+    <main class="w-full text-center">
+        <section class="acerca-de">
+            <div class="container">
+                <h2>Sobre de nosotros</h2>
+                <div class="sobre-nosotros-container">
+                    <div class="sobre-nosotros-sec1">
+                        <div class="imgsbox">
+                            <div class="imgBox1">
+                                <img
+                                    src="https://radio-ebenezer.com/wp-content/uploads/2022/02/Dios-esta-en-todas-partejpg.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="imgBox2">
+                                <img
+                                    src="https://img.gruporeforma.com/imagenes/960x640/6/194/5193257.jpg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="content text-justify">
+                            <h3>Breve Historia</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Voluptas alias exercitationem,
+                                magni dicta numquam ex possimus sapiente animi
+                                harum iure.
+                            </p>
+
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatibus deleniti ipsa
+                                doloribus nihil, quibusdam accusantium, hic
+                                quaerat assumenda placeat perferendis optio qui!
+                                Distinctio dignissimos ducimus perferendis
+                                laudantium pariatur at dolor! Lorem ipsum dolor
+                                sit amet consectetur adipisicing elit. Atque
+                                animi suscipit eaque nobis corrupti, odit amet
+                                ad mollitia quos odio illum dicta, nulla dolore.
+                                Nihil debitis nisi, voluptatem ipsum, ab sunt
+                                eveniet voluptatum quibusdam nostrum dicta optio
+                                libero a veritatis!
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Nihil vel itaque repellendus
+                                praesentium porro dolor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <MVVCard />
+        <button class="text-center my-8 btn text-xl px-4 rounded-sm">
+            <a href="#">Más información</a>
+        </button>
+        <section class="services-content mt-24">
+            <h2 class="text-3xl font-bold mb-10 text-green-500">Servicios y Productos</h2>
+            <div class="services-products-content">
+                <div class="cards">
+                    <ServiceCard />
+                    <ServiceCard />
+                    <ServiceCard />
+                    <ServiceCard />
+                </div>
+                <div class="img-box">
+                    <img
+                        src="https://img.gruporeforma.com/imagenes/960x640/6/194/5193257.jpg"
+                        alt="imagen-sobre-cultivos"
+                    />
+                </div>
+            </div>
+        </section>
+    </main>
+</Layaout>

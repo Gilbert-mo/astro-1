@@ -1,0 +1,206 @@
+<footer class="footer">
+    <div class="container">
+      <div class="footer-start">
+          <div class="about-us">
+            <h4>AZUABANA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque odio voluptate vitae quo dignissimos cumque, itaque veniam enim inventore repellat alias ipsam ex distinctio ipsum obcaecati iusto nam tempore cum quos eveniet vero. Ea molestias minima deserunt adipisci autem aperiam?</p>
+            <div class="redes">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>              
+          </div>
+          <div class="contactos">
+            <h4>Contactanos</h4>
+            <div class="contactos">
+              <div class="item">
+                <i class="fa-solid fa-location-dot"></i><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, distinctio.</p>
+              </div>
+              <div class="item">
+                <i class="fa-solid fa-phone"></i><p>999-999-999</p>
+              </div>
+              <div class="item">
+                <i class="fa-solid fa-envelope"></i><p>info@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="navegacion">
+            <h4>Navegacion</h4>
+            <nav class="nav">
+              <a href="#">Inicio</a>
+              <a href="#">Sobre nosotros</a>
+              <a href="#">Servicios</a>
+              <a href="#">Trabajos</a>
+              <a href="#">Blog</a>
+              <a href="#">Contacto</a>
+            </nav>
+          </div>
+          <div class="ig">
+            <h4>instagram</h4>
+            <div class="ig-fotos-container">
+              <div class="imgBox"><img src="https://st.depositphotos.com/1491329/2998/i/600/depositphotos_29984153-stock-photo-spring-nature-beautiful-landscape-green.jpg" alt=""></div>
+              <div class="imgBox"><img src="https://saposyprincesas.elmundo.es/wp-content/uploads/2013/05/proteger-la-naturaleza.jpg" alt=""></div>
+              <div class="imgBox"><img src="https://historiadelavida.editorialaces.com/wp-content/uploads/2017/05/diseno-en-la-naturaleza-entrada.jpg" alt=""></div>
+              <div class="imgBox"><img src="https://images.ctfassets.net/hrltx12pl8hq/a2hkMAaruSQ8haQZ4rBL9/8ff4a6f289b9ca3f4e6474f29793a74a/nature-image-for-website.jpg?fit=fill&w=480&h=320" alt=""></div>
+              <div class="imgBox"><img src="https://blogs.iadb.org/sostenibilidad/wp-content/uploads/sites/26/2021/04/Recuperacion-del-COVID-inversion-en-naturaleza.jpg" alt=""></div>
+              <div class="imgBox"><img src="https://www.ambientum.com/wp-content/uploads/2019/09/luz-naturaleza.jpg" alt=""></div>
+            </div>
+          </div>
+      </div>
+      <div class="footer-end">
+        <div class="copy"><p>&#169 Copyright 2022 All rights reserved.</p></div>
+        <div class="terminos-condiciones">
+          <a href="#">Terminos y condiciones</a>
+          <a href="#">Politica</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+      </div>
+    </div>
+</footer>
+
+<style>
+    /* todo FOOTER STYLE */
+
+    .footer {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        *color: #6c757d;
+        color: #abb2b9;
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 16px;
+
+        /*background: rgb(0,2,36);
+    background: linear-gradient(90deg, rgba(0,2,36,1) 14%, rgba(14,36,7,1) 56%, rgba(5,106,23,0.9635562843301383) 100%); */
+        *background: rgb(33, 33, 33);
+        background: #191919;
+    }
+
+    .footer-start {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr) 3fr;
+        gap: 25px;
+
+        font-size: 0.87em;
+    }
+
+    .footer-start .about-us .redes {
+        margin-top: 20px;
+    }
+
+    .footer-start .about-us .redes a {
+        color: #abb2b9;
+        font-size: 20px;
+        margin-right: 20px;
+        transition: all 100ms ease-in-out;
+    }
+
+    .footer-start .about-us .redes a:hover {
+        color: var(--color1);
+    }
+
+    .footer-start .ig .ig-fotos-container {
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-template-rows: 70% 70%;
+
+        gap: 5px;
+    }
+
+    .footer-start .ig .imgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .footer-start .ig .imgBox {
+        transition: all 100ms ease-in-out;
+    }
+
+    .footer-start .ig .imgBox:hover {
+        transform: scale(1.5);
+    }
+
+    .footer-start .about-us p {
+        word-spacing: 5px;
+    }
+
+    .footer-end {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.87em;
+    }
+
+    .footer h4 {
+        margin-bottom: 30px;
+        color: rgb(231, 231, 231);
+        font-weight: 500;
+        display: inline-block;
+        *border-bottom: 2px solid var(--color1);
+        *padding-bottom: 10px;
+    }
+
+    .footer h4::after {
+        content: "";
+        position: relative;
+        top: 8px;
+        right: 0;
+        width: 50%;
+        height: 3px;
+        background: var(--color1);
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+
+        transition: all 100ms ease;
+    }
+
+    .footer h4:hover::after {
+        width: 100%;
+    }
+
+    .footer .navegacion .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .navegacion .nav a {
+        color: #abb2b9;
+    }
+
+    .footer .navegacion .nav a:hover {
+        color: #fff;
+    }
+
+    .footer .navegacion a,
+    .footer .contactos .item {
+        margin-bottom: 20px;
+        font-size: 0.87em;
+
+        display: flex;
+    }
+
+    .footer .contactos .item i {
+        margin-right: 20px;
+        position: relative;
+        top: 3px;
+    }
+
+    .footer .footer-end {
+        margin-top: 50px;
+        border-top: 1px solid rgba(205, 205, 205, 0.589);
+        padding-top: 20px;
+    }
+
+    .footer .footer-end .terminos-condiciones a {
+        color: #abb2b9;
+        margin-left: 20px;
+    }
+
+    .footer .footer-end .terminos-condiciones a:hover {
+        color: #fff;
+    }
+</style>

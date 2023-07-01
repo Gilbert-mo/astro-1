@@ -1,0 +1,62 @@
+<header class="header">
+    <div class="container">
+        <div class="logotipo"><a href="#">AZUABANA</a></div>
+        <nav class="nav">
+            <a href="#" class="select">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* todo HEADER STYLE */
+
+    .header {
+        width: 100%;
+        background: var(--color2);
+        font-weight: 700;
+        padding: 20px 0;
+        font-size: 16px;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 5000;
+    }
+
+    .header .container {
+        height: 100%;
+        display: flex;
+        *flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header .logotipo a {
+        color: var(--color1);
+        letter-spacing: 3px;
+        font-size: 1.11em;
+    }
+
+    .header .nav {
+        height: 100%;
+    }
+
+    .header .nav a {
+        color: #aaa;
+        margin: 0 15px;
+        font-size: 0.88em;
+
+        transition: all 100ms ease-in-out;
+    }
+
+    .header .nav a:hover,
+    .header .nav a.select {
+        color: var(--color1);
+    }
+
+    .select {
+        color: var(--color1);
+    }
+</style>

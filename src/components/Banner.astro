@@ -1,88 +1,68 @@
-<div class="banner">
-    <div class="container">
-        <div class="titulo">
-            <h1>AZUABANA</h1>
-        </div>
-        <div class="description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eligendi molestiae, a totam laboriosam tempore architecto
-                maiores repellat perferendis fuga pariatur. Vitae voluptate
-                voluptates excepturi doloremque quibusdam neque dolores suscipit
-                repudiandae a consequuntur nihil sunt accusantium vero veniam
-                ullam, blanditiis alias, culpa ratione ad aliquid unde corporis
-                nesciunt iure? Obcaecati, fugit!
+---
+
+const bg = 'bg-gradient-to-br from-slate-700 via-lime-900 to-slate-800'
+const clip = 'clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);'
+
+---
+
+<div class="banner ">
+    <div class="pb-32 pt-14 lg:pt-32 sm:pt-20 relative overflow-x-hidden">
+        <div class="flex flex-col items-center">
+            <h1 class="mb-10 px-4 text-center">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="max-w-3xl px-8 text-center text-xl font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente corrupti ratione assumenda, reiciendis adipisci sit
+                nulla minus fuga nostrum, ialiquid ducimus?
+                Veritatis harum doloribus laboriosam non quisquam.
             </p>
         </div>
-        <div class="buttons">
-            <button role="button"
-                ><i class="fa-solid fa-address-book"></i>Contratar</button
-            >
-            <button role="button"
-                ><i class="fa-solid fa-circle-info"></i>Más información</button
-            >
+        <div class="flex mb-14 mt-8 justify-center gap-8 md:mb-20 w-full sm-mb-16 lg:mb-20">
+            <a href="#" class="button rounded-full hover:bg-green-600">Contactar</a>
+            <a href="#" class="button bg-red-500 hover:bg-red-600">Servicios</a>
         </div>
     </div>
 </div>
 
 <style>
-    /* todo MAIN STYLE */
+
+    .button {
+        display: inline-flex;
+        background: var(--color1);
+        padding: 10px 30px;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+    }
 
     .banner {
-        height: 100vh;
-        display: flex;
-        justify-content: end;
-        font-size: 16px;
-
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.683),
-                rgba(0, 0, 0, 0.432),
-                rgba(0, 0, 0, 0.715)
-            ),
-            url(../img/img1.jpeg);
-        background-repeat: no-repeat;
-        background-position: center center;
+        background: url('/bg-banner.jpeg') no-repeat fixed;
+        background-position: center;
         background-size: cover;
-    }
-
-    .banner .container {
-        margin-bottom: 6.25em;
         color: #fff;
+        opacity: 50;
+        background-blend-mode: soft-light;
+        background-color: rgba(0, 0, 0, .8);
+        clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
     }
 
-    .banner .titulo h1 {
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        letter-spacing: 3px;
-        color: var(--color1);
+    .banner h1 {
+        font-size: 50px;
+        max-width: 12ch;
     }
 
-    .banner .description {
-        width: 80%;
-        margin-bottom: 2.2em;
+    .banner p {
+        line-height: 1.7;
     }
 
-    .main .banner .description p {
-        word-spacing: 10px;
-        color: rgb(234, 231, 231);
+    @media (min-width: 640px) {
+        .banner h1 {
+            max-width: 20ch;
+        }
+        
     }
 
-    .banner .buttons button {
-        border: 1px solid var(--color1);
-        background: transparent;
-        padding: 0.62em 1.25em;
-        margin-right: 1.25em;
-        color: var(--color1);
-        font-weight: 700;
-        letter-spacing: 2px;
-        border-radius: 3px;
-
-        transition: all 300ms ease;
+    @media (min-width: 1024px) {
+        .banner h1 {
+        font-size: 62px;
     }
-
-    .banner .buttons button:hover {
-        background: var(--color1);
-        color: var(--color3);
     }
 </style>

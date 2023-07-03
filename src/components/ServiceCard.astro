@@ -2,20 +2,20 @@
 const {
     title = "Titulo del Servicio",
     description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ipsum impedit fugiat nobis, animi nulla ad eligendi qui praesentium ullam, consequuntur aliquam quam laudantium, ea tempora error facere! Optio, modi.",
-    imgPath = "https://img.gruporeforma.com/imagenes/960x640/6/194/5193257.jpg",
+    imgPath = "https://img.gruporeforma.com/imagenes/960x640/6/194/5193257.jpg", more = true
 } = Astro.props;
 ---
 
-<div class="card">
-    <div class="box-img">
+<article class="card shadow-lg flex flex-col lg:flex-row text-right flex-1">
+    <div class="box-img lg:w-72 shrink-0">
         <img src={imgPath} alt="imagen-servicio" />
     </div>
-    <div class="content">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <a href="#">Ver más</a>
+    <div class="content flex flex-col gap-4 p-6 text-left">
+        <h2 class="text-2xl font-medium">{title}</h2>
+        <p class="text-gray-600 text-xl">{description}</p>
+        {more ? <a href="#" class="text-xl mt-1 text-green-600 hover:text-green-500">Ver más</a> : <a href="#">Otra cosa</a>}
     </div>
-</div>
+</article>
 
 <style>
     .card {
@@ -38,5 +38,12 @@ const {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    @media (max-width: 1024px){
+        .box-img {
+            clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+
+        }
     }
 </style>

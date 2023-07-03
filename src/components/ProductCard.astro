@@ -1,0 +1,71 @@
+---
+const url =
+    "https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpc2FqZSUyMGRlJTIwY29sb3Jlc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80";
+
+const {
+    imgPath = url,
+    title = "Lorem ipsum dolor sit amet",
+    description,
+    active = true,
+    price = "$250",
+    cardLg = false,
+} = Astro.props;
+---
+
+{
+    cardLg === false ? (
+        <article class="flex flex-col shadow-2xl">
+            <div class="h-48 w-full overflow-hidden">
+                {active && <img src={imgPath} alt="imagen-producto" />}
+            </div>
+            <div class="flex flex-1 flex-col gap-6 p-6 text-left">
+                <div class="before:float-right before:h-1 before:w-32">
+                    <h3 class="text-3xl lg:text-2xl text-green-500">{title}</h3>
+                </div>
+                <p class="text-gray-600 tracking-wide">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam sunt asperiores vitae cupiditate facilis
+                    repudiandae.
+                </p>
+                <footer class="mt-auto">
+                    <h5 class="bg-green-500 py-2 px-7 rounded-md inline-flex text-2xl text-white">{price}</h5>
+                </footer>
+            </div>
+        </article>
+    ) : (
+        <article class="flex flex-row min-w-0 shadow-2xl">
+            <div class="flex flex-1 flex-col lg:flex-row">
+                <div class="flex-1">
+                    <img
+                        src={imgPath}
+                        alt="imagen producto"
+                        class="block h-48 w-full overflow-hidden lg:hidden "
+                    />
+                    <div class="flex flex-1 flex-col gap-6 p-6 text-left lg:px-8 justify-center lg:mt-10">
+                        <div class="before:float-right before:h-1 before:w-32">
+                            <h3 class="text-3xl lg:text-4xl text-green-500">{title}</h3>
+                        </div>
+                        <p class="text-gray-600 tracking-wide">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Aperiam sunt asperiores vitae cupiditate
+                            facilis.
+                        </p>
+                        <footer class="mt-auto">
+                            <h5 class="bg-green-500 py-2 px-7 rounded-md inline-flex text-2xl text-white">{price}</h5>
+                            <a href="#" class="text-green-500 ml-3 hover:text-green-600 py-2 px-7 border-green-500 border-2">Ver más</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="hidden lg:block flex-1 img-box-lg">
+                    <img src={imgPath} alt="imagen producto" />
+                </div>
+            </div>
+        </article>
+    )
+}
+
+<style>
+    .img-box-lg {
+        clip-path: polygon(0 0, 100% 0%, 96% 100%, 14% 100%);
+}
+</style>

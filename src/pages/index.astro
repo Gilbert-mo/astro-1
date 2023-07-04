@@ -16,6 +16,12 @@ import Testimonio from "../components/Testimonio.astro";
         height: 100%;
         background: #00000065;
     }
+
+    @media(min-width: 768px) {
+        .img-bx {
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        }
+    }
 </style>
 
 <Layaout>
@@ -23,11 +29,59 @@ import Testimonio from "../components/Testimonio.astro";
         <Banner />
         <div class="relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64">
             <!--acerda de  -->
+            <section class="relative">
+                <div class="max-w-screen-xl px-4 mx-auto min-w-0 mt-24">
+                    <article class="grid md:grid-cols-2 gap-2">
+                        <div class="overflow-hidden relative img-bx">
+                            <img
+                                src="/bg-banner.jpeg"
+                                alt="imagen-breve-historia"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <article class="p-4 flex flex-col gap-y-4 text-gray-700">
+                            <h2 class="text-green-500 text-3xl font-bold">Breve historia</h2>
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ex tenetur dolor voluptatem
+                                laboriosam dicta velit? Nisi aliquam alias,
+                                repudiandae pariatur voluptatum temporibus
+                                ratione nesciunt nemo fugit atque aut numquam
+                                et.
+                            </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Qui, sapiente? Debitis ut
+                                voluptas alias vitae nesciunt rerum omnis!
+                                Facilis tempora praesentium maiores placeat
+                                deleniti animi, ipsa aliquid itaque incidunt
+                                nisi? Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Explicabo modi dicta
+                                exercitationem commodi ipsa illo quos aliquid
+                                voluptates suscipit cumque in, excepturi,
+                                consectetur qui eum debitis, soluta autem dolor
+                                impedit!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Incidunt exercitationem nobis
+                                laboriosam neque quaerat aperiam aliquid saepe
+                                alias consequuntur officia optio provident
+                                ratione, sequi aliquam? Quisquam amet, in
+                                explicabo at dolorum minima. Eligendi,
+                                necessitatibus tempora voluptates pariatur id
+                                odit dignissimos.
+                            </p>
+                        </article>
+                    </article>
+                </div>
+            </section>
+            <!--mision viison valores -->
             <section class="">
-                <div class="container mx-auto">
+                <div class="max-w-screen-xl min-w-0 mx-auto">
                     <MVVCard />
-                    <div class="text-center">
-                        <button>Más informacion</button>
+                    <div class="text-center mt-12">
+                        <a href="#" class="text-xl text-gray-100 py-4 px-6 rounded-lg bg-green-500 hover:bg-green-600">Mostrar más</a>
                     </div>
                 </div>
             </section>
@@ -61,11 +115,17 @@ import Testimonio from "../components/Testimonio.astro";
                                 alt="imagen-sobre-cultivos"
                                 class="w-full h-full object-cover absolute top-0 left-0"
                             />
-                            <div class="lg:hidden absolute text-center z-50 flex flex-col gap-6 items-center">
+                            <div
+                                class="lg:hidden absolute text-center z-50 flex flex-col gap-6 items-center"
+                            >
                                 <h2 class="text-4xl title text-gray-200 px-4">
                                     Lorem ipsum dolor sit amet.
                                 </h2>
-                                <a href="#" class="text-2xl px-6 rounded-full text-center text-gray-200 bg-green-500 inline-block max-w-max py-3 mx-4 hover:bg-green-600 transition-all duration-100 ease-out hover:text-gray-100">Contactar</a>
+                                <a
+                                    href="#"
+                                    class="text-2xl px-6 rounded-full text-center text-gray-200 bg-green-500 inline-block max-w-max py-3 mx-4 hover:bg-green-600 transition-all duration-100 ease-out hover:text-gray-100"
+                                    >Contactar</a
+                                >
                             </div>
                             <div class="overlay"></div>
                         </div>
@@ -86,7 +146,9 @@ import Testimonio from "../components/Testimonio.astro";
                     </p>
                 </div>
                 <div class="mt-12">
-                    <div class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div
+                        class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3"
+                    >
                         <ProductCard client:visible />
                         <ProductCard client:visible />
                         <ProductCard client:visible />
@@ -98,11 +160,16 @@ import Testimonio from "../components/Testimonio.astro";
             </section>
             <!-- testimonios -->
             <section class="flex justify-center items-center flex-col">
-                <div class="max-w-6xl mx-auto text-center">
-                    <h2 class="text-5xl px-6 mb-8 font-medium">
-                        Lorem ipsum dolor sit <span class="text-green-500">amet consectetur adipisicing</span> elit.
-                        Pariatur, porro!
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-5xl px-4 mb-8 font-medium">
+                        Lorem ipsum dolor sit <span class="text-green-500"
+                            >amet consectetur adipisicing</span
+                        > elit. Pariatur!
                     </h2>
+                    <p class="px-8 text-center text-xl mx-auto">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Perferendis, tempora?
+                    </p>
                 </div>
                 <div
                     class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"

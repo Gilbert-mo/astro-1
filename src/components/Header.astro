@@ -1,62 +1,45 @@
-<header class="header">
-    <div class="container">
-        <div class="logotipo"><a href="#">AZUABANA</a></div>
-        <nav class="nav">
-            <a href="#" class="select">Inicio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Contactos</a>
-        </nav>
-    </div>
-</header>
+---
+import { AiOutlineMenu } from "react-icons/ai";
+---
+
+<div class="sticky top-0 z-20 max-h-screen">
+    <header class="header shadow-lg">
+        <div class="container-header flex h-header items-center justify-between">
+            <div class="logotipo"><a href="#" class="text-xl">AZUABANA</a></div>
+            <nav class="nav ml-16 hidden shrink flex-row items-center text-xl gap-16 lg:flex">
+                <a href="#" class="select">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Proudctos</a>
+                <a href="#">Contacto</a>
+                <a href="#">Acerca de</a>
+            </nav>
+            <div class="block lg:hidden">
+                <AiOutlineMenu />
+            </div>
+        </div>
+    </header>
+</div>
 
 <style>
-    /* todo HEADER STYLE */
-
-    .header {
+    .container-header {
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
-        background: var(--color2);
-        font-weight: 700;
-        padding: 20px 0;
-        font-size: 16px;
-
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 5000;
+        height: auto;
+        max-width: 1536px;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
-    .header .container {
-        height: 100%;
-        display: flex;
-        *flex-direction: row;
-        justify-content: space-between;
+    .h-header {
+        height: 5rem;
     }
 
-    .header .logotipo a {
-        color: var(--color1);
-        letter-spacing: 3px;
-        font-size: 1.11em;
+    @media (min-width: 768px) {
+    .container-header {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
+  }
 
-    .header .nav {
-        height: 100%;
-    }
-
-    .header .nav a {
-        color: #aaa;
-        margin: 0 15px;
-        font-size: 0.88em;
-
-        transition: all 100ms ease-in-out;
-    }
-
-    .header .nav a:hover,
-    .header .nav a.select {
-        color: var(--color1);
-    }
-
-    .select {
-        color: var(--color1);
-    }
 </style>

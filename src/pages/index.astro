@@ -1,5 +1,5 @@
 ---
-import Layaout from "../components/Layaout/Layaout.astro";
+import Layaout from "../components/layaout/Layaout.astro";
 import Banner from "../components/Banner.astro";
 import MVVCard from "../components/MVVCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
@@ -91,7 +91,7 @@ import Testimonio from "../components/Testimonio.astro";
                     <h2
                         class="text-5xl sm:text-6xl text-green-500 mb- px-4 max-w-3xl mb-8 md:mb-10 font-medium"
                     >
-                        Servicios y Productos
+                        Nuestros Servicios
                     </h2>
                     <p class="max-w-3xl px-8 text-2xl md:text-xl">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -149,9 +149,9 @@ import Testimonio from "../components/Testimonio.astro";
                     <div
                         class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3"
                     >
-                        <ProductCard client:visible />
-                        <ProductCard client:visible />
-                        <ProductCard client:visible />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
                         <div class="grid lg:col-span-3">
                             <ProductCard cardLg={true} />
                         </div>
@@ -159,25 +159,24 @@ import Testimonio from "../components/Testimonio.astro";
                 </div>
             </section>
             <!-- testimonios -->
-            <section class="flex justify-center items-center flex-col">
+            <section class="flex justify-center items-center flex-col mb-12">
                 <div class="max-w-3xl mx-auto text-center">
                     <h2 class="text-5xl px-4 mb-8 font-medium">
-                        Lorem ipsum dolor sit <span class="text-green-500"
-                            >amet consectetur adipisicing</span
-                        > elit. Pariatur!
+                        ¡Vea lo que dicen <span class="text-green-500"
+                            >nuestros</span
+                        > clientes!
                     </h2>
                     <p class="px-8 text-center text-xl mx-auto">
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Perferendis, tempora?
                     </p>
                 </div>
-                <div
-                    class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
+                <div class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
                 >
-                    <Testimonio client:visible />
-                    <Testimonio client:visible />
-                    <Testimonio client:visible />
-                    <Testimonio client:visible />
+                    <Testimonio />
+                    <Testimonio />
+                    <Testimonio />
+                    <Testimonio />
                 </div>
             </section>
         </div>

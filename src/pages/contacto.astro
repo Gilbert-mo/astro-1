@@ -1,0 +1,290 @@
+---
+const a = {
+    x: "4",
+};
+
+import Layaout from "../components/Layaout/Layaout.astro";
+import { AiOutlineMenu } from "react-icons/ai";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+---
+
+<Layaout>
+    <section>
+        <div class="container-contact">
+            <div class="contactInfo">
+                <div class="text-gray-200 flex flex-col gap-10">
+                    <h2 class="">Info. de contacto</h2>
+                    <div class="flex flex-col gap-16">
+                        <div class="text-lg flex flex-col gap-6">
+                            <a
+                                href=""
+                                class="flex gap-4 items-center hover:underline"
+                            >
+                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p>C/ Bartolomé Barceló, Azua de Compostela</p>
+                            </a>
+                            <a
+                                href=""
+                                class="flex gap-4 items-center hover:underline"
+                            >
+                                <p class="text-"><AiOutlineMenu /></p>
+                                <p class="truncate">azuabana.5549@gmail.com</p>
+                            </a>
+                            <a
+                                href=""
+                                class="flex gap-4 items-center hover:underline"
+                            >
+                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p>809-521-5549</p>
+                            </a>
+                        </div>
+                        <div class="flex gap-6">
+                            <a href="#" class="hover:text-gray-300"><FaFacebookSquare /></a>
+                            <a href="#" class="hover:text-gray-300"><FaInstagram /></a>
+                            <a href="#" class="hover:text-gray-300"><FaTwitter /></a>
+                            <a href="#" class="hover:text-gray-300"><FaYoutube /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <h2>Envianos un mensaje</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" required />
+                        <span>Nombre</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required />
+                        <span>Apellido</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required />
+                        <span>Correo electrónico</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required />
+                        <span>Teléfono</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea required></textarea>
+                        <span>Escribe un mensaje...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Enviar" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layaout>
+
+<style>
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #095a55;
+    }
+
+    section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        background: #fff38e;
+        height: 112%;
+    }
+
+    .container-contact {
+        position: relative;
+        min-width: 1100px;
+        min-height: 550px;
+        display: flex;
+        z-index: 1000;
+    }
+
+    .container-contact .contactInfo {
+        position: absolute;
+        top: 40px;
+        width: 350px;
+        height: calc(100% - 80px);
+        background: #095a55;
+        z-index: 1;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .container-contact .contactForm {
+        position: absolute;
+        padding: 70px 50px;
+        padding-left: 250px;
+        height: 100%;
+        width: calc(100% - 150px);
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.15);
+        margin-left: 150px;
+        background-color: #fff;
+    }
+
+    .contactInfo {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .contactForm h2 {
+        color: #0f3959;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .contactForm .formBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .contactForm .formBox .inputBox {
+        position: relative;
+        margin-bottom: 35px;
+    }
+
+    .contactForm .formBox .inputBox.w50 {
+        width: 47%;
+    }
+
+    .contactForm .formBox .inputBox.w100 {
+        width: 100%;
+    }
+
+    .contactForm .formBox .inputBox input,
+    .contactForm .formBox .inputBox textarea {
+        width: 100%;
+        resize: none;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #777;
+    }
+
+    .contactForm .formBox .inputBox textarea {
+        height: 120px;
+    }
+
+    .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        pointer-events: none;
+        font-size: 18px;
+        font-weight: 300;
+        transition: 0.3s;
+    }
+
+    .contactForm .formBox .inputBox input:focus ~ span,
+    .contactForm .formBox .inputBox input:valid ~ span,
+    .contactForm .formBox .inputBox textarea:focus ~ span,
+    .contactForm .formBox .inputBox textarea:valid ~ span {
+        transform: translateY(-20px);
+        font-size: 12px;
+        font-weight: 400;
+        font-weight: 500;
+        color: #095a55;
+        letter-spacing: 1px;
+    }
+
+    .contactForm .formBox .inputBox input[type="submit"] {
+        position: relative;
+        border: none;
+        max-width: 150px;
+        padding: 12px;
+        cursor: pointer;
+        background: #095a55;
+        color: #fff;
+    }
+
+    .contactForm .formBox .inputBox input[type="submit"]:hover {
+        background: #0b837b;
+    }
+
+    @media (max-width: 1200px) {
+        .container-contact {
+            min-width: 90%;
+            max-width: auto;
+            margin: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .container-contact .contactInfo {
+            top: 0;
+            height: 550px;
+            position: relative;
+            box-shadow: none;
+        }
+
+        .container-contact .contactForm {
+            position: relative;
+            width: calc(100% - 350px);
+            padding-left: 0px;
+            margin-left: 0;
+            /* padding-left: 0;
+            padding-right: 0; */
+            padding: 40px;
+            height: 550px;
+            box-shadow: none;
+        }
+    }
+
+    @media (max-width: 950px) {
+        section {
+            background: #fff38e;
+        }
+
+        section::before {
+            display: none;
+        }
+
+        .container-contact {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .container-contact .contactInfo {
+            width: 100%;
+            height: auto;
+        }
+
+        .container-contact .contactForm {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .container-contact .contactForm {
+            padding: 25px;
+        }
+        .container-contact .contactInfo {
+            padding: 25px;
+        }
+
+        .container-contact .contactForm .inputBox.w50 {
+            width: 100%;
+        }
+    }
+</style>

@@ -2,18 +2,18 @@
 import { AiOutlineMenu } from "react-icons/ai";
 ---
 
-<div class="sticky top-0 z-20 max-h-screen">
-    <header class="header shadow-lg">
+<div class="sticky top-0 max-h-screen">
+    <header class="header shadow-xl bg-gray-100">
         <div class="container-header flex h-header items-center justify-between">
-            <div class="logotipo"><a href="#" class="text-xl">AZUABANA</a></div>
+            <div class="logotipo"><a href="/" class="text-xl text-green-500 font-bold">AZUABANA</a></div>
             <nav class="nav ml-16 hidden shrink flex-row items-center text-xl gap-16 lg:flex">
-                <a href="#" class="select">Inicio</a>
-                <a href="#">Servicios</a>
-                <a href="#">Proudctos</a>
-                <a href="#">Contacto</a>
-                <a href="#">Acerca de</a>
+                <a href="/">Inicio</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/productos">Proudctos</a>
+                <a href="/contacto">Contacto</a>
+                <a href="/acerca-de">Acerca de</a>
             </nav>
-            <div class="block lg:hidden">
+            <div class="lg:hidden font-bold text-3xl bg-gray-200 w-12 h-12 flex justify-center items-center rounded-full">
                 <AiOutlineMenu />
             </div>
         </div>
@@ -21,6 +21,15 @@ import { AiOutlineMenu } from "react-icons/ai";
 </div>
 
 <style>
+
+    .sticky {
+        z-index: 3000;
+    }
+
+    .nav > a:hover {
+        text-decoration: underline;
+    }
+
     .container-header {
         margin-left: auto;
         margin-right: auto;

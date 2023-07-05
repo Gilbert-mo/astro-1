@@ -1,5 +1,8 @@
 ---
-import { AiOutlineMenu } from "react-icons/ai";
+
+import pkg from 'react-icons/ai';
+  const { AiOutlineMenu } = pkg;
+// import { AiOutlineMenu } from "react-icons/ai";
 ---
 
 <div class="sticky top-0 max-h-screen">
@@ -13,7 +16,7 @@ import { AiOutlineMenu } from "react-icons/ai";
                 <a href="/contacto">Contacto</a>
                 <a href="/acerca-de">Acerca de</a>
             </nav>
-            <div class="lg:hidden font-bold text-3xl bg-gray-200 w-12 h-12 flex justify-center items-center rounded-full">
+            <div class="lg:hidden font-bold text-3xl cursor-pointer hover:bg-gray-200 w-12 h-12 flex justify-center items-center rounded-full">
                 <AiOutlineMenu />
             </div>
         </div>

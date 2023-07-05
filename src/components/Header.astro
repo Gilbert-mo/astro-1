@@ -1,15 +1,15 @@
 ---
 
-import pkg from 'react-icons/ai';
-  const { AiOutlineMenu } = pkg;
-// import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 ---
 
 <div class="sticky top-0 max-h-screen">
     <header class="header shadow-xl bg-gray-100">
         <div class="container-header flex h-header items-center justify-between">
-            <div class="logotipo"><a href="/" class="text-xl text-green-500 font-bold">AZUABANA</a></div>
-            <nav class="nav ml-16 hidden shrink flex-row items-center text-xl gap-16 lg:flex">
+            <div class="logo"><a href="/" class="text-xl text-green-500 font-bold flex justify-center items-center gap-3">
+                <img src="/logo.jpg" class="rounded-full w-14 h-14" alt="logo"><p>AZUABANA</p>
+            </a></div>
+            <nav class="nav ml-16 hidden shrink font-medium flex-row items-center text-xl gap-16 lg:flex text-gray-700">
                 <a href="/">Inicio</a>
                 <a href="/servicios">Servicios</a>
                 <a href="/productos">Proudctos</a>
@@ -24,6 +24,10 @@ import pkg from 'react-icons/ai';
 </div>
 
 <style>
+
+    .logo p {
+        letter-spacing: 2px;
+    }
 
     .sticky {
         z-index: 3000;

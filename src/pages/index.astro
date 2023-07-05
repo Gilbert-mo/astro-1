@@ -17,7 +17,7 @@ import Testimonio from "../components/Testimonio.astro";
         background: #00000065;
     }
 
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
         .img-bx {
             clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         }
@@ -39,38 +39,44 @@ import Testimonio from "../components/Testimonio.astro";
                                 class="w-full h-full object-cover"
                             />
                         </div>
-                        <article class="p-4 flex flex-col gap-y-4 text-gray-700">
-                            <h2 class="text-green-500 text-3xl font-bold">Breve historia</h2>
-                            <p class="">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Ex tenetur dolor voluptatem
-                                laboriosam dicta velit? Nisi aliquam alias,
-                                repudiandae pariatur voluptatum temporibus
-                                ratione nesciunt nemo fugit atque aut numquam
-                                et.
+                        <article
+                            class="p-4 flex flex-col gap-y-4 text-gray-700"
+                        >
+                            <h2 class="text-green-500 text-3xl font-bold">
+                                Breve historia
+                            </h2>
+                            <p class="capitalize">
+                                Breve historia de la asociación de productores
+                                de bananos orgánicos del valle de azua.
                             </p>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Qui, sapiente? Debitis ut
-                                voluptas alias vitae nesciunt rerum omnis!
-                                Facilis tempora praesentium maiores placeat
-                                deleniti animi, ipsa aliquid itaque incidunt
-                                nisi? Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Explicabo modi dicta
-                                exercitationem commodi ipsa illo quos aliquid
-                                voluptates suscipit cumque in, excepturi,
-                                consectetur qui eum debitis, soluta autem dolor
-                                impedit!
+                                Esta asociación se fundó en la cuidad de Azua de
+                                Compostela el 8 de julio de 2002, entre sus
+                                fundadores hoy se mantienen vigentes los
+                                productores: <span class="font-bold"
+                                    >Seferino Corporan, Manuel Sención, Justino
+                                    Crespo.</span
+                                > Entre los objetivos de su fundación primo la unificación
+                                de los pequeños y medianos productores de banano
+                                ofertando mejores opciones en la comercialización
+                                de sus productos, otros de nuestros objetivos es
+                                la protección del medio ambiente contribuyendo así
+                                con la reforestación de nuestra región y mejorar
+                                el enterno de nuestras áreas agrícolas y proteger
+                                nuestra ecología.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Incidunt exercitationem nobis
-                                laboriosam neque quaerat aperiam aliquid saepe
-                                alias consequuntur officia optio provident
-                                ratione, sequi aliquam? Quisquam amet, in
-                                explicabo at dolorum minima. Eligendi,
-                                necessitatibus tempora voluptates pariatur id
-                                odit dignissimos.
+                                En nuestro inicio empezamos a exportar a través
+                                de Savid Dominicana C.X.A. con una producción de
+                                2,800 cajas semanales equivalentes a 3
+                                contenedores semanales. El espíritu de
+                                crecimiento de nuestros socios nos ha hecho
+                                trabajar incansablemente y hoy en día exportamos
+                                entre 5,000 y 6,000 cajas semanales
+                                equivalenetes a 6 contenedores. Iniciamos con
+                                una matrícula de 16 miembros y hoy día tenemos
+                                46 lo que demuestra un crecimiento significativo
+                                y aumento de volumen exportando.
                             </p>
                         </article>
                     </article>
@@ -81,7 +87,11 @@ import Testimonio from "../components/Testimonio.astro";
                 <div class="max-w-screen-xl min-w-0 mx-auto">
                     <MVVCard />
                     <div class="text-center mt-12">
-                        <a href="#" class="text-xl text-gray-100 py-4 px-6 rounded-lg bg-green-500 hover:bg-green-600">Mostrar más</a>
+                        <a
+                            href="/acerca-de"
+                            class="text-xl text-gray-100 py-4 px-6 rounded-lg bg-green-500 hover:bg-green-600"
+                            >Acerca de nosotros</a
+                        >
                     </div>
                 </div>
             </section>
@@ -102,7 +112,6 @@ import Testimonio from "../components/Testimonio.astro";
                 <div class="mt-12">
                     <div class="grid lg:grid-cols-4 gap-5">
                         <div class="lg:col-span-3 px-4 xl:pl-20">
-                            <ServiceCard />
                             <ServiceCard />
                             <ServiceCard />
                             <ServiceCard />
@@ -162,7 +171,7 @@ import Testimonio from "../components/Testimonio.astro";
             <section class="flex justify-center items-center flex-col mb-12">
                 <div class="max-w-3xl mx-auto text-center">
                     <h2 class="text-5xl px-4 mb-8 font-medium">
-                        ¡Vea lo que dicen <span class="text-green-500"
+                        ¡Lea lo que dicen <span class="text-green-500 font-bold"
                             >nuestros</span
                         > clientes!
                     </h2>
@@ -171,7 +180,8 @@ import Testimonio from "../components/Testimonio.astro";
                         elit. Perferendis, tempora?
                     </p>
                 </div>
-                <div class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
+                <div
+                    class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
                 >
                     <Testimonio />
                     <Testimonio />

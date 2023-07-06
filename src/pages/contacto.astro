@@ -42,31 +42,32 @@ import Layaout from "../components/layaout/Layaout.astro";
             </div>
             <div class="contactForm">
                 <h2>Envianos un mensaje</h2>
-                <div class="formBox">
+                <form action="gilbertmatosortiz@gmail.com" method="POST" class="formBox">
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="nombre" name="nombre" />
                         <span>Nombre</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="apellido" name="apellido" />
                         <span>Apellido</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="email" name="email" />
                         <span>Correo electrónico</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="tel" name="tel" />
                         <span>Teléfono</span>
                     </div>
                     <div class="inputBox w100">
-                        <textarea required></textarea>
+                        <textarea required id="mensaje" name="mensaje"></textarea>
                         <span>Escribe un mensaje...</span>
                     </div>
                     <div class="inputBox w100">
                         <input type="submit" value="Enviar" />
+                        <input type="hidden" name="_next" value="/contacto">
+                        <input type="hidden" name="_captcha" value="false">
                     </div>
-                </div>
             </div>
         </div>
     </section>

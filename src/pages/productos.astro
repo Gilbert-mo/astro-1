@@ -1,1 +1,35 @@
-<h1>productos</h1>
+---
+import ProductCard from "../components/ProductCard.astro";
+import Layaout from "../components/layaout/Layaout.astro";
+---
+
+<Layaout title={'AZUABANA | PRODUCTOS'}>
+    <section>
+        <div class="text-center mx-auto max-w-3xl">
+            <h2
+                class="text-4xl sm:text-6xl text-green-500 mb- px-4 max-w-3xl mb-8 md:mb-10 font-medium"
+            >
+                Nuestros Productos
+            </h2>
+            <p class="max-w-3xl px-8 text-xl md:text-xl">
+                Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Placeat molestias tempore.
+            </p>
+        </div>
+        <div class="mt-12">
+            <div
+                class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3"
+            >
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <div class="grid lg:col-span-3">
+                    <ProductCard cardLg={true} />
+                </div>
+            </div>
+        </div>
+    </section>
+</Layaout>

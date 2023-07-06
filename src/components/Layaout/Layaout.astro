@@ -1,6 +1,7 @@
 ---
 import Header from "../Header.astro";
 import Footer from "../Footer.astro";
+const {title, nav} = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -8,7 +9,8 @@ import Footer from "../Footer.astro";
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="icon" href="/logo.jpg" type="image/jpg">
+        <title>{title}</title>
         <!--Links fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +29,7 @@ import Footer from "../Footer.astro";
         <link rel="stylesheet" href="/styles.css" />
     </head>
     <body>
-        <Header />
+        <Header nav={nav} />
         <hr class="border-astro-gray-500 astro-OUAMJN2I">
         <slot />
         <div class="noise-footer">

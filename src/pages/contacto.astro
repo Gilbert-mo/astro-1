@@ -1,15 +1,8 @@
 ---
 import Layaout from "../components/layaout/Layaout.astro";
-import { AiOutlineMenu } from "react-icons/ai";
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
 ---
 
-<Layaout>
+<Layaout title={'AZUABANA | CONTACTO'}>
     <section>
         <div class="container-contact">
             <div class="contactInfo">
@@ -21,29 +14,28 @@ import {
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p class="text-xl"><i class="fa-solid fa-location-dot"></i></p>
                                 <p>C/ Bartolomé Barceló, Azua de Compostela</p>
                             </a>
                             <a
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-"><AiOutlineMenu /></p>
+                                <p class="text-"><i class="fa-solid fa-envelope"></i></p>
                                 <p class="truncate">azuabana.5549@gmail.com</p>
                             </a>
                             <a
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p class="text-xl"><i class="fa-solid fa-phone"></i></p>
                                 <p>809-521-5549</p>
                             </a>
                         </div>
-                        <div class="flex gap-6">
-                            <a href="#" class="hover:text-gray-300"><FaFacebookSquare /></a>
-                            <a href="#" class="hover:text-gray-300"><FaInstagram /></a>
-                            <a href="#" class="hover:text-gray-300"><FaTwitter /></a>
-                            <a href="#" class="hover:text-gray-300"><FaYoutube /></a>
+                        <div class="flex gap-6 net">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -81,6 +73,11 @@ import {
 </Layaout>
 
 <style>
+
+    .net a:hover {
+        color: #cacaca;
+    }
+
     section {
         display: flex;
         justify-content: center;

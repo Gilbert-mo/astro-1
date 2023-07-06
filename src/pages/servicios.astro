@@ -1,1 +1,55 @@
-<h1>Servicios</h1>
+---
+import Layaout from "../components/layaout/Layaout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<Layaout title={'AZUABANA | SERVICIOS'}>
+    <section class="relative">
+        <div class="text-center mx-auto max-w-3xl">
+            <h2
+                class="text-5xl sm:text-6xl text-green-500 mb- px-4 max-w-3xl mb-8 md:mb-10 font-medium"
+            >
+                Nuestros Servicios
+            </h2>
+            <p class="max-w-3xl px-8 text-2xl md:text-xl">
+                Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Placeat molestias tempore necessitatibus nobis
+                maxime quo modi labore eius similique ad.
+            </p>
+        </div>
+        <div class="mt-12">
+            <div class="grid lg:grid-cols-4 gap-5">
+                <div class="lg:col-span-3 px-4 xl:pl-20">
+                    <ServiceCard more={false} />
+                    <ServiceCard more={false} />
+                    <ServiceCard more={false} />
+                    <ServiceCard more={false} />
+                    <ServiceCard more={false} />
+                    <ServiceCard more={false} />
+                </div>
+                <div
+                    class="overflow-hidden lg:col-span-1 lg:h-full h-80 relative lg:pr-4 img-containe flex justify-center items-center"
+                >
+                    <img
+                        src="https://img.gruporeforma.com/imagenes/960x640/6/194/5193257.jpg"
+                        alt="imagen-sobre-cultivos"
+                        class="w-full h-full object-cover absolute top-0 left-0"
+                    />
+                    <div
+                        class="lg:hidden absolute text-center z-50 flex flex-col gap-6 items-center"
+                    >
+                        <h2 class="text-4xl title text-gray-200 px-4">
+                            Lorem ipsum dolor sit amet.
+                        </h2>
+                        <a
+                            href="#"
+                            class="text-2xl px-6 rounded-full text-center text-gray-200 bg-green-500 inline-block max-w-max py-3 mx-4 hover:bg-green-600 transition-all duration-100 ease-out hover:text-gray-100"
+                            >Contactar</a
+                        >
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layaout>

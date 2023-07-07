@@ -5,9 +5,15 @@ import MVVCard from "../components/MVVCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Testimonio from "../components/Testimonio.astro";
+import Galeria from "../components/Galeria";
 ---
 
 <style>
+
+    /* .imgBoxAcerda-de {
+        clip-path: polygon(92% 15%, 77% 15%, 53% 6%, 19% 7%, 0% 25%, 2% 47%, 0% 82%, 16% 96%, 38% 100%, 62% 99%, 77% 95%, 92% 81%, 97% 62%, 100% 29%);
+    } */
+
     .overlay {
         position: absolute;
         top: 0;
@@ -36,7 +42,7 @@ import Testimonio from "../components/Testimonio.astro";
                             <img
                                 src="/bg-banner.jpeg"
                                 alt="imagen-breve-historia"
-                                class="w-full h-full object-cover"
+                                class="w-full h-full object-cover imgBoxAcerda-de"
                             />
                         </div>
                         <article
@@ -45,38 +51,8 @@ import Testimonio from "../components/Testimonio.astro";
                             <h2 class="text-green-500 text-3xl font-bold">
                                 AZUABANA
                             </h2>
-                            <p class="capitalize">
-                                Breve historia de la asociación de productores
-                                de bananos orgánicos del valle de azua.
-                            </p>
-                            <p>
-                                Esta asociación se fundó en la cuidad de Azua de
-                                Compostela el 8 de julio de 2002, entre sus
-                                fundadores hoy se mantienen vigentes los
-                                productores: <span class="font-bold"
-                                    >Seferino Corporan, Manuel Sención, Justino
-                                    Crespo.</span
-                                > Entre los objetivos de su fundación primo la unificación
-                                de los pequeños y medianos productores de banano
-                                ofertando mejores opciones en la comercialización
-                                de sus productos, otros de nuestros objetivos es
-                                la protección del medio ambiente contribuyendo así
-                                con la reforestación de nuestra región y mejorar
-                                el enterno de nuestras áreas agrícolas y proteger
-                                nuestra ecología.
-                            </p>
-                            <p>
-                                En nuestro inicio empezamos a exportar a través
-                                de Savid Dominicana C.X.A. con una producción de
-                                2,800 cajas semanales equivalentes a 3
-                                contenedores semanales. El espíritu de
-                                crecimiento de nuestros socios nos ha hecho
-                                trabajar incansablemente y hoy en día exportamos
-                                entre 5,000 y 6,000 cajas semanales
-                                equivalenetes a 6 contenedores. Iniciamos con
-                                una matrícula de 16 miembros y hoy día tenemos
-                                46 lo que demuestra un crecimiento significativo
-                                y aumento de volumen exportando.
+                            <p class="text-xl">
+                                La Asociación de Productores de Bananos Orgánicos del Valle de Azua sigue siendo un referente en la industria bananera orgánica, destacando por su compromiso con la calidad de sus productos y la preservación del medio ambiente. Su labor contribuye a fortalecer la economía local y a mantener la belleza natural de la región, convirtiéndola en un lugar sostenible y próspero para las futuras generaciones de productores de banano orgánico.
                             </p>
                         </article>
                     </article>
@@ -104,17 +80,15 @@ import Testimonio from "../components/Testimonio.astro";
                         Nuestros Servicios
                     </h2>
                     <p class="max-w-3xl px-8 text-2xl md:text-xl">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Placeat molestias tempore necessitatibus nobis
-                        maxime quo modi labore eius similique ad.
+                        Ofrecemos múltiples insumos para la <span class="text-green-500">producción de  bananos</span> y otros cultivos.
                     </p>
                 </div>
                 <div class="mt-12">
                     <div class="grid lg:grid-cols-4 gap-5">
                         <div class="lg:col-span-3 px-4 xl:pl-20">
-                            <ServiceCard />
-                            <ServiceCard />
-                            <ServiceCard />
+                            <ServiceCard title="Comercialización de banano de pequeños productores" description='AZUABANA facilita la comercialización del banano de pequeños productores de la región sur del país hacia los mercados nacionales e internacionales.' />
+                            <ServiceCard title='Accesoría técnica' description="Ofrecemos asistencia técnica a productores bajo normas de producción orgánica ambientalmente sostenible y comercio justo. " />
+                            <ServiceCard title="Insumos agrícolas" description='Facilitamos todos los productos necesarios para la producción de bananos y otros rubros agrícolas.'/>
                         </div>
                         <div
                             class="overflow-hidden lg:col-span-1 lg:h-full h-80 relative lg:pr-4 img-containe flex justify-center items-center"
@@ -150,19 +124,18 @@ import Testimonio from "../components/Testimonio.astro";
                         Nuestros Productos
                     </h2>
                     <p class="max-w-3xl px-8 text-xl md:text-xl">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Placeat molestias tempore.
+                        Nuestros productos son producidos con un bajo impacto ambiental y promueven el desarrollo de las comunidades y la mano de obra local.
                     </p>
                 </div>
                 <div class="mt-12">
                     <div
                         class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3"
                     >
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
+                        <ProductCard title={'Abono bocashi'} price={'150RD$'} />
+                        <ProductCard title={'Humus de lombriz'} price={'300RD$'} />
+                        <ProductCard title={'Bioles'} price={'6RD$'} />
                         <div class="grid lg:col-span-3">
-                            <ProductCard cardLg={true} />
+                            <ProductCard cardLg={true} title={'Plantas para diversificación'} />
                         </div>
                     </div>
                 </div>
@@ -189,6 +162,8 @@ import Testimonio from "../components/Testimonio.astro";
                     <Testimonio />
                 </div>
             </section>
+            <!-- galeria -->
+            <Galeria />
         </div>
     </main>
 </Layaout>

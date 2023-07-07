@@ -2,7 +2,7 @@
   <div
     class="flex flex-col items-start justify-between gap-12 py-20 md:py-24 sm:flex-row-reverse"
   >
-    <div class="networks flex items-center gap-4 text-4xl">
+    <div class="networks flex items-center gap-6 text-4xl">
       <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
       <a href="#"><i class="fa-brands fa-instagram"></i></a>
       <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -57,6 +57,12 @@
       </div>
     </section>
   </div>
+  <nav aria-label="Legal" class="grid grid-cols-[1fr,auto] items-center justify-between gap-x-4 gap-y-16 py-8 opacity-60 md:grid-cols-[auto,1fr,auto] md:py-12">
+		<a class="link mr-auto" href="/">Terminos y condiciones</a>
+		<p class="col-span-2 text-center md:text-right md:col-span-1">
+			&#169 Copyright 2023 All rights reserved.
+		</p>
+	</nav>
 </footer>
 
 <!-- <div class="">
@@ -119,184 +125,3 @@
     }
   }
 </style>
-
-<!-- <div class="ig-fotos-container">
-  <div class="imgBox">
-    <img
-      src="https://st.depositphotos.com/1491329/2998/i/600/depositphotos_29984153-stock-photo-spring-nature-beautiful-landscape-green.jpg"
-      alt=""
-    />
-  </div>
-  <div class="imgBox">
-    <img
-      src="https://saposyprincesas.elmundo.es/wp-content/uploads/2013/05/proteger-la-naturaleza.jpg"
-      alt=""
-    />
-  </div>
-  <div class="imgBox">
-    <img
-      src="https://historiadelavida.editorialaces.com/wp-content/uploads/2017/05/diseno-en-la-naturaleza-entrada.jpg"
-      alt=""
-    />
-  </div>
-  <div class="imgBox">
-    <img
-      src="https://images.ctfassets.net/hrltx12pl8hq/a2hkMAaruSQ8haQZ4rBL9/8ff4a6f289b9ca3f4e6474f29793a74a/nature-image-for-website.jpg?fit=fill&w=480&h=320"
-      alt=""
-    />
-  </div>
-  <div class="imgBox">
-    <img
-      src="https://blogs.iadb.org/sostenibilidad/wp-content/uploads/sites/26/2021/04/Recuperacion-del-COVID-inversion-en-naturaleza.jpg"
-      alt=""
-    />
-  </div>
-  <div class="imgBox">
-    <img
-      src="https://www.ambientum.com/wp-content/uploads/2019/09/luz-naturaleza.jpg"
-      alt=""
-    />
-  </div>
-</div> -->
-
-<!-- <style>
-    todo FOOTER STYLE
-
-    .footer {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        *color: #6c757d;
-        color: #abb2b9;
-        font-family: "Montserrat", sans-serif;
-
-        font-size: 16px;
-        *background: rgb(33, 33, 33);
-        background: #191919;
-    }
-
-    .footer-start {
-        display: grid;
-        grid-template-columns: repeat(3, 2fr) 3fr;
-        gap: 25px;
-
-        font-size: 0.87em;
-    }
-
-    .footer-start .about-us .redes {
-        margin-top: 20px;
-    }
-
-    .footer-start .about-us .redes a {
-        color: #abb2b9;
-        font-size: 20px;
-        margin-right: 20px;
-        transition: all 100ms ease-in-out;
-    }
-
-    .footer-start .about-us .redes a:hover {
-        color: var(--color1);
-    }
-
-    .footer-start .ig .ig-fotos-container {
-        display: grid;
-        grid-template-columns: repeat(3, 4fr);
-        grid-template-rows: 70% 70%;
-
-        gap: 5px;
-    }
-
-    .footer-start .ig .imgBox img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .footer-start .ig .imgBox {
-        transition: all 100ms ease-in-out;
-    }
-
-    .footer-start .ig .imgBox:hover {
-        transform: scale(1.5);
-    }
-
-    .footer-start .about-us p {
-        word-spacing: 5px;
-    }
-
-    .footer-end {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.87em;
-    }
-
-    .footer h4 {
-        margin-bottom: 30px;
-        color: rgb(231, 231, 231);
-        font-weight: 500;
-        display: inline-block;
-        *border-bottom: 2px solid var(--color1);
-        *padding-bottom: 10px;
-    }
-
-    .footer h4::after {
-        content: "";
-        position: relative;
-        top: 8px;
-        right: 0;
-        width: 50%;
-        height: 3px;
-        background: var(--color1);
-        display: block;
-        margin: auto;
-        border-radius: 10px;
-
-        transition: all 100ms ease;
-    }
-
-    .footer h4:hover::after {
-        width: 100%;
-    }
-
-    .footer .navegacion .nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer .navegacion .nav a {
-        color: #abb2b9;
-    }
-
-    .footer .navegacion .nav a:hover {
-        color: #fff;
-    }
-
-    .footer .navegacion a,
-    .footer .contactos .item {
-        margin-bottom: 20px;
-        font-size: 0.87em;
-
-        display: flex;
-    }
-
-    .footer .contactos .item i {
-        margin-right: 20px;
-        position: relative;
-        top: 3px;
-    }
-
-    .footer .footer-end {
-        margin-top: 50px;
-        border-top: 1px solid rgba(205, 205, 205, 0.589);
-        padding-top: 20px;
-    }
-
-    .footer .footer-end .terminos-condiciones a {
-        color: #abb2b9;
-        margin-left: 20px;
-    }
-
-    .footer .footer-end .terminos-condiciones a:hover {
-        color: #fff;
-    }
-</style> -->

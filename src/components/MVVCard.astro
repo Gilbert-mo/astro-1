@@ -1,47 +1,84 @@
-<section class="text-gray-700 grid lg:grid-cols-3 grid-cols-1 gap-10 p-4 text-xl">
-    <div class="text-center ">
-        <h3>Misión</h3>
-        <div class="content">
-            <p>
-                <span class="font-bold text-green-500 uppercase">Azuabana</span> es una asociación creada para incrementar la competitividad colectiva de sus socios, para satisfacer las necesidades y expectativas de sus clientes, cuyo objetivo es dar un valor agregado a sus productos con costos competitivos, afianzando el cumplimiento de la calidad requerida, mediante un trabajo de mejora continua de la empresa y de su personal.
-            </p>
-        </div>
+<section
+  class="text-gray-700 grid lg:grid-cols-3 grid-cols-1 gap-10 p-4 text-xl"
+>
+  <div class="text-center flex flex-col items-center gap-10">
+    <img src="/mision.png" alt="mision" class="w-52 h-52" />
+    <h3>Misión</h3>
+    <div class="content">
+      <p>
+        <span class="font-bold text-green-500 uppercase">Azuabana</span> es una asociación
+        creada para incrementar la competitividad colectiva de sus socios, para satisfacer
+        las necesidades y expectativas de sus clientes, cuyo objetivo es dar un valor
+        agregado a sus productos con costos competitivos, afianzando el cumplimiento
+        de la calidad requerida, mediante un trabajo de mejora continua de la empresa
+        y de su personal.
+      </p>
     </div>
-    <div class="text-center">
-        <h3>Visión</h3>
-        <div class="content">
-            <p>
-                Ser un referente organizativo con carácter empresarial y la mejor opción para la adquisición de producto de calidad por parte de nuestros clientes, y la experiencia colectiva con mayor capacidad de producción en el mercado competitivo, comprometiéndonos con nuestros clientes, proveedores y con todo el personal que esté involucrado en el proceso, en hacer de la mejora continua, la mejor estrategia para el logro y mantenimiento de la calidad. 
-            </p>
-        </div>
+  </div>
+  <div class="text-center flex flex-col items-center gap-10">
+    <img src="/vision.png" alt="" class="w-52 h-52" />
+    <h3>Visión</h3>
+    <div class="content">
+      <p>
+        Ser un referente organizativo con carácter empresarial y la mejor opción
+        para la adquisición de producto de calidad por parte de nuestros
+        clientes, y la experiencia colectiva con mayor capacidad de producción
+        en el mercado competitivo, comprometiéndonos con nuestros clientes,
+        proveedores y con todo el personal que esté involucrado en el proceso,
+        en hacer de la mejora continua, la mejor estrategia para el logro y
+        mantenimiento de la calidad.
+      </p>
     </div>
-    <div class="text-center">
-        <h3>Valores</h3>
-        <div class="content">
-            <p class="capitalize">
-                Calidad, productividad, cambio, responsabilidad social, integridad, igualdad, equidad, respeto, participación, honradez, transparencia, solidaridad, no discriminación (género, raza, credo), no acoso.
-            </p>
-        </div>
+  </div>
+  <div class="text-center flex flex-col items-center gap-10">
+    <img src="/valor.png" alt="" class="w-52 h-52" />
+    <h3>Valores</h3>
+    <div class="content">
+      <p class="capitalize">
+        Calidad, productividad, cambio, responsabilidad social, integridad,
+        igualdad, equidad, respeto, participación, honradez, transparencia,
+        solidaridad, no discriminación (género, raza, credo), no acoso.
+      </p>
     </div>
+  </div>
 </section>
 
 <style>
-    section > div {
-        border-bottom: 6px solid var(--color1);
-        padding-bottom: 30px;
-    }
+  section > div img {
+    filter: opacity(0.7);
+    /* animation: fadeInOut 3s infinite; */
+  }
 
-    section div h3 {
-        font-size: 24px;
-        background: var(--color1);
-        color: var(--color3);
-        display: inline-block;
-        padding: 5px 20px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
+  section > div {
+    border-bottom: 6px solid var(--color1);
+    padding-bottom: 30px;
+  }
 
-    section .content {
-        text-align: justify;
+  section div h3 {
+    font-size: 24px;
+    background: var(--color1);
+    color: var(--color3);
+    display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  section .content {
+    text-align: justify;
+  }
+    @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      /* filter: blur(10px); */
     }
+    50% {
+      opacity: 1;
+      /* filter: blur(0); */
+    }
+    100% {
+      opacity: 0;
+      /* filter: blur(10px); */
+    }
+  }
 </style>

@@ -5,7 +5,7 @@ const url =
 const {
     imgPath = url,
     title = "Lorem ipsum dolor sit amet",
-    description,
+    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sunt asperiores vitae cupiditate facilis.",
     active = true,
     price = "$250",
     cardLg = false,
@@ -23,9 +23,7 @@ const {
                     <h3 class="text-3xl lg:text-2xl text-green-500">{title}</h3>
                 </div>
                 <p class="text-gray-600 tracking-wide">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aperiam sunt asperiores vitae cupiditate facilis
-                    repudiandae.
+                    {description}
                 </p>
                 <footer class="mt-auto">
                     <h5 class="bg-green-500 py-2 px-7 rounded-md inline-flex text-2xl text-white">{price}</h5>
@@ -46,9 +44,7 @@ const {
                             <h3 class="text-3xl lg:text-4xl text-green-500">{title}</h3>
                         </div>
                         <p class="text-gray-600 tracking-wide">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Aperiam sunt asperiores vitae cupiditate
-                            facilis.
+                            {description}
                         </p>
                         <footer class="mt-auto">
                             <h5 class="bg-green-500 py-2 px-7 rounded-md inline-flex text-2xl text-white">{price}</h5>

@@ -4,7 +4,7 @@ function Galeria() {
   return (
     <section>
       <div className="max-w-3xl mx-auto text-center">
-        <h2 class="text-5xl px-4 mb-8 font-medium">
+        <h2 className="text-5xl px-4 mb-8 font-medium">
           ¡Galería de
           <span className="text-green-500 font-bold"> Imágenes</span>!
         </h2>

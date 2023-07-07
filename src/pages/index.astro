@@ -5,9 +5,15 @@ import MVVCard from "../components/MVVCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Testimonio from "../components/Testimonio.astro";
+import Galeria from "../components/Galeria";
 ---
 
 <style>
+
+    /* .imgBoxAcerda-de {
+        clip-path: polygon(92% 15%, 77% 15%, 53% 6%, 19% 7%, 0% 25%, 2% 47%, 0% 82%, 16% 96%, 38% 100%, 62% 99%, 77% 95%, 92% 81%, 97% 62%, 100% 29%);
+    } */
+
     .overlay {
         position: absolute;
         top: 0;
@@ -17,14 +23,14 @@ import Testimonio from "../components/Testimonio.astro";
         background: #00000065;
     }
 
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
         .img-bx {
             clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         }
     }
 </style>
 
-<Layaout>
+<Layaout title={'AZUABANA | INICIO'}>
     <main class="flex flex-col flex-1">
         <Banner />
         <div class="relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64">
@@ -36,41 +42,17 @@ import Testimonio from "../components/Testimonio.astro";
                             <img
                                 src="/bg-banner.jpeg"
                                 alt="imagen-breve-historia"
-                                class="w-full h-full object-cover"
+                                class="w-full h-full object-cover imgBoxAcerda-de"
                             />
                         </div>
-                        <article class="p-4 flex flex-col gap-y-4 text-gray-700">
-                            <h2 class="text-green-500 text-3xl font-bold">Breve historia</h2>
-                            <p class="">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Ex tenetur dolor voluptatem
-                                laboriosam dicta velit? Nisi aliquam alias,
-                                repudiandae pariatur voluptatum temporibus
-                                ratione nesciunt nemo fugit atque aut numquam
-                                et.
-                            </p>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Qui, sapiente? Debitis ut
-                                voluptas alias vitae nesciunt rerum omnis!
-                                Facilis tempora praesentium maiores placeat
-                                deleniti animi, ipsa aliquid itaque incidunt
-                                nisi? Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Explicabo modi dicta
-                                exercitationem commodi ipsa illo quos aliquid
-                                voluptates suscipit cumque in, excepturi,
-                                consectetur qui eum debitis, soluta autem dolor
-                                impedit!
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Incidunt exercitationem nobis
-                                laboriosam neque quaerat aperiam aliquid saepe
-                                alias consequuntur officia optio provident
-                                ratione, sequi aliquam? Quisquam amet, in
-                                explicabo at dolorum minima. Eligendi,
-                                necessitatibus tempora voluptates pariatur id
-                                odit dignissimos.
+                        <article
+                            class="p-4 flex flex-col gap-y-4 text-gray-700"
+                        >
+                            <h2 class="text-green-500 text-3xl font-bold">
+                                AZUABANA
+                            </h2>
+                            <p class="text-xl">
+                                La Asociación de Productores de Bananos Orgánicos del Valle de Azua sigue siendo un referente en la industria bananera orgánica, destacando por su compromiso con la calidad de sus productos y la preservación del medio ambiente. Su labor contribuye a fortalecer la economía local y a mantener la belleza natural de la región, convirtiéndola en un lugar sostenible y próspero para las futuras generaciones de productores de banano orgánico.
                             </p>
                         </article>
                     </article>
@@ -81,7 +63,11 @@ import Testimonio from "../components/Testimonio.astro";
                 <div class="max-w-screen-xl min-w-0 mx-auto">
                     <MVVCard />
                     <div class="text-center mt-12">
-                        <a href="#" class="text-xl text-gray-100 py-4 px-6 rounded-lg bg-green-500 hover:bg-green-600">Mostrar más</a>
+                        <a
+                            href="/acerca-de"
+                            class="text-xl text-gray-100 py-4 px-6 rounded-lg bg-green-500 hover:bg-green-600"
+                            >Acerca de nosotros</a
+                        >
                     </div>
                 </div>
             </section>
@@ -94,18 +80,15 @@ import Testimonio from "../components/Testimonio.astro";
                         Nuestros Servicios
                     </h2>
                     <p class="max-w-3xl px-8 text-2xl md:text-xl">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Placeat molestias tempore necessitatibus nobis
-                        maxime quo modi labore eius similique ad.
+                        Ofrecemos múltiples insumos para la <span class="text-green-500">producción de  bananos</span> y otros cultivos.
                     </p>
                 </div>
                 <div class="mt-12">
                     <div class="grid lg:grid-cols-4 gap-5">
                         <div class="lg:col-span-3 px-4 xl:pl-20">
-                            <ServiceCard />
-                            <ServiceCard />
-                            <ServiceCard />
-                            <ServiceCard />
+                            <ServiceCard title="Comercialización de banano de pequeños productores" description='AZUABANA facilita la comercialización del banano de pequeños productores de la región sur del país hacia los mercados nacionales e internacionales.' />
+                            <ServiceCard title='Accesoría técnica' description="Ofrecemos asistencia técnica a productores bajo normas de producción orgánica ambientalmente sostenible y comercio justo. " />
+                            <ServiceCard title="Insumos agrícolas" description='Facilitamos todos los productos necesarios para la producción de bananos y otros rubros agrícolas.'/>
                         </div>
                         <div
                             class="overflow-hidden lg:col-span-1 lg:h-full h-80 relative lg:pr-4 img-containe flex justify-center items-center"
@@ -141,19 +124,18 @@ import Testimonio from "../components/Testimonio.astro";
                         Nuestros Productos
                     </h2>
                     <p class="max-w-3xl px-8 text-xl md:text-xl">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Placeat molestias tempore.
+                        Nuestros productos son producidos con un bajo impacto ambiental y promueven el desarrollo de las comunidades y la mano de obra local.
                     </p>
                 </div>
                 <div class="mt-12">
                     <div
                         class="mx-auto grid min-w-0 max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3"
                     >
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
+                        <ProductCard title={'Abono bocashi'} price={'150RD$'} />
+                        <ProductCard title={'Humus de lombriz'} price={'300RD$'} />
+                        <ProductCard title={'Bioles'} price={'6RD$'} />
                         <div class="grid lg:col-span-3">
-                            <ProductCard cardLg={true} />
+                            <ProductCard cardLg={true} title={'Plantas para diversificación'} />
                         </div>
                     </div>
                 </div>
@@ -162,7 +144,7 @@ import Testimonio from "../components/Testimonio.astro";
             <section class="flex justify-center items-center flex-col mb-12">
                 <div class="max-w-3xl mx-auto text-center">
                     <h2 class="text-5xl px-4 mb-8 font-medium">
-                        ¡Vea lo que dicen <span class="text-green-500"
+                        ¡Lea lo que dicen <span class="text-green-500 font-bold"
                             >nuestros</span
                         > clientes!
                     </h2>
@@ -171,7 +153,8 @@ import Testimonio from "../components/Testimonio.astro";
                         elit. Perferendis, tempora?
                     </p>
                 </div>
-                <div class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
+                <div
+                    class="grid md:grid-cols-4 gap-4 sm:gap-6 px-4 mx-auto max-w-screen-xl mt-12"
                 >
                     <Testimonio />
                     <Testimonio />
@@ -179,6 +162,8 @@ import Testimonio from "../components/Testimonio.astro";
                     <Testimonio />
                 </div>
             </section>
+            <!-- galeria -->
+            <Galeria />
         </div>
     </main>
 </Layaout>

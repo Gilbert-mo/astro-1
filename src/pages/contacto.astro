@@ -1,19 +1,8 @@
 ---
-const a = {
-    x: "4",
-};
-
-import Layaout from "../components/Layaout/Layaout.astro";
-import { AiOutlineMenu } from "react-icons/ai";
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import Layaout from "../components/layaout/Layaout.astro";
 ---
 
-<Layaout>
+<Layaout title={'AZUABANA | CONTACTO'}>
     <section>
         <div class="container-contact">
             <div class="contactInfo">
@@ -25,66 +14,71 @@ import {
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p class="text-xl"><i class="fa-solid fa-location-dot"></i></p>
                                 <p>C/ Bartolomé Barceló, Azua de Compostela</p>
                             </a>
                             <a
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-"><AiOutlineMenu /></p>
+                                <p class="text-"><i class="fa-solid fa-envelope"></i></p>
                                 <p class="truncate">azuabana.5549@gmail.com</p>
                             </a>
                             <a
                                 href=""
                                 class="flex gap-4 items-center hover:underline"
                             >
-                                <p class="text-xl"><AiOutlineMenu /></p>
+                                <p class="text-xl"><i class="fa-solid fa-phone"></i></p>
                                 <p>809-521-5549</p>
                             </a>
                         </div>
-                        <div class="flex gap-6">
-                            <a href="#" class="hover:text-gray-300"><FaFacebookSquare /></a>
-                            <a href="#" class="hover:text-gray-300"><FaInstagram /></a>
-                            <a href="#" class="hover:text-gray-300"><FaTwitter /></a>
-                            <a href="#" class="hover:text-gray-300"><FaYoutube /></a>
+                        <div class="flex gap-6 net">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="contactForm">
                 <h2>Envianos un mensaje</h2>
-                <div class="formBox">
+                <form action="gilbertmatosortiz@gmail.com" method="POST" class="formBox">
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="nombre" name="nombre" />
                         <span>Nombre</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="apellido" name="apellido" />
                         <span>Apellido</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="email" name="email" />
                         <span>Correo electrónico</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required />
+                        <input type="text" required id="tel" name="tel" />
                         <span>Teléfono</span>
                     </div>
                     <div class="inputBox w100">
-                        <textarea required></textarea>
+                        <textarea required id="mensaje" name="mensaje"></textarea>
                         <span>Escribe un mensaje...</span>
                     </div>
                     <div class="inputBox w100">
                         <input type="submit" value="Enviar" />
+                        <input type="hidden" name="_next" value="/contacto">
+                        <input type="hidden" name="_captcha" value="false">
                     </div>
-                </div>
             </div>
         </div>
     </section>
 </Layaout>
 
 <style>
+
+    .net a:hover {
+        color: #cacaca;
+    }
+
     section {
         display: flex;
         justify-content: center;

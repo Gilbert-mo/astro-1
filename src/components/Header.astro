@@ -1,54 +1,141 @@
----
-import { AiOutlineMenu } from "react-icons/ai";
----
-
 <div class="sticky top-0 max-h-screen">
-    <header class="header shadow-xl bg-gray-100">
-        <div class="container-header flex h-header items-center justify-between">
-            <div class="logotipo"><a href="/" class="text-xl text-green-500 font-bold">AZUABANA</a></div>
-            <nav class="nav ml-16 hidden shrink flex-row items-center text-xl gap-16 lg:flex">
-                <a href="/">Inicio</a>
-                <a href="/servicios">Servicios</a>
-                <a href="/productos">Proudctos</a>
-                <a href="/contacto">Contacto</a>
-                <a href="/acerca-de">Acerca de</a>
-            </nav>
-            <div class="lg:hidden font-bold text-3xl bg-gray-200 w-12 h-12 flex justify-center items-center rounded-full">
-                <AiOutlineMenu />
-            </div>
-        </div>
-    </header>
+  <header class="header shadow-xl bg-gray-100">
+    <div class="container-header flex h-header items-center justify-between">
+      <div class="logo">
+        <a
+          href="/"
+          class="text-xl text-green-500 font-bold flex justify-center items-center gap-3"
+        >
+          <img src="/logo.jpg" class="rounded-full w-14 h-14" alt="logo" /><p>
+            AZUABANA
+          </p>
+        </a>
+      </div>
+      <nav
+        class="nav ml-16 hidden shrink font-medium flex-row items-center text-xl gap-16 lg:flex text-gray-700"
+      >
+        <a href="/">Inicio</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/productos">Proudctos</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/acerca-de">Acerca de</a>
+      </nav>
+      <div
+        id="btn-menu"
+        class="lg:hidden text-gray-600 font-bold text-3xl cursor-pointer hover:bg-gray-200 w-12 h-12 flex justify-center items-center rounded-full"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <nav
+      id="nav-responsive"
+      class="nav-responsive lg:hidden text-2xl shrink mx-auto font-medium flex-col items-center z-40 text-gray-700"
+    >
+      <a class="itemNav" href="/">Inicio</a>
+      <a class="itemNav" href="/servicios">Servicios</a>
+      <a class="itemNav" href="/productos">Proudctos</a>
+      <a class="itemNav" href="/contacto">Contacto</a>
+      <a class="itemNav" href="/acerca-de">Acerca de</a>
+    </nav>
+  </header>
 </div>
 
 <style>
+  .nav-responsive {
+    display: none;
+  }
 
-    .sticky {
-        z-index: 3000;
-    }
+  .activeNav {
+    color: var(--color1);
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
-    .nav > a:hover {
-        text-decoration: underline;
-    }
+  .active {
+    display: flex;
+  }
 
-    .container-header {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: auto;
-        max-width: 1536px;
-        padding-right: 2rem;
-        padding-left: 2rem;
-    }
+  .activeNavRes {
+    background: var(--color1);
+    color: #fff;
+  }
 
-    .h-header {
-        height: 5rem;
-    }
+  .nav-responsive a {
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #0000004f;
+    text-align: center;
+    transition: all 100ms linear;
+  }
 
-    @media (min-width: 768px) {
+  .nav-responsive a:hover {
+    background: var(--color1);
+    color: #fff;
+  }
+
+  .logo p {
+    letter-spacing: 2px;
+  }
+
+  .sticky {
+    z-index: 3000;
+  }
+
+  .nav > a:hover {
+    text-decoration: underline;
+  }
+
+  .container-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    max-width: 1536px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-bottom: 1px solid #00000069;
+  }
+
+  .h-header {
+    height: 5rem;
+  }
+
+  @media (min-width: 768px) {
     .container-header {
       padding-left: 2rem;
       padding-right: 2rem;
     }
   }
-
 </style>
+
+<script>
+  const btn = document.getElementById("btn-menu");
+  btn.addEventListener("click", () => {
+    document.getElementById("nav-responsive").classList.toggle("active");
+  });
+
+  // Obtener el elemento de navegación y todos los elementos de menú
+  const nav = document.querySelector(".nav");
+  const menuItems = nav.querySelectorAll("a");
+
+  // Recorrer todos los elementos de menú
+  menuItems.forEach((item) => {
+    // Verificar si la URL del elemento de menú coincide con la URL actual
+    if (item.href === window.location.href) {
+      // Agregar la clase activa al elemento de menú correspondiente
+      item.classList.add("activeNav");
+    }
+  });
+
+  const navRes = document.getElementById('nav-responsive')
+  const navResItems = navRes.querySelectorAll('a')
+
+  // Recorrer todos los elementos de menú
+  navResItems.forEach((item) => {
+    // Verificar si la URL del elemento de menú coincide con la URL actual
+    if (item.href === window.location.href) {
+      // Agregar la clase activa al elemento de menú correspondiente
+      item.classList.add("activeNavRes");
+    }
+  });
+</script>

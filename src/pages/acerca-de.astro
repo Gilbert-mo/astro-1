@@ -1,1 +1,190 @@
-<h1>acerca de nosotros</h1>
+---
+import AboutUsCard from "../components/AboutUsCard.astro";
+import Layaout from "../components/layaout/Layaout.astro";
+import MVVCard from '../components/MVVCard.astro'
+---
+
+<Layaout title={'AZUABANA | NOSOTROS'}>
+    <div class="relative grid gap-20 sm:gap-16 md:gap-20 lg:gap-64">
+        <section class="relative">
+            <div class="max-w-screen-xl px-4 mx-auto min-w-0 mt-24">
+                <article class="grid md:grid-cols-2 gap-2">
+                    <div class="overflow-hidden relative img-bx">
+                        <img
+                            src="/bg-banner.jpeg"
+                            alt="imagen-breve-historia"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <article
+                        class="p-4 flex flex-col gap-y-4 text-gray-700"
+                    >
+                        <h2 class="text-green-500 text-3xl font-bold">
+                            Breve historia
+                        </h2>
+                        <p class="capitalize">
+                            Breve historia de la asociación de productores
+                            de bananos orgánicos del valle de azua.
+                        </p>
+                        <p>
+                            Esta asociación se fundó en la cuidad de Azua de
+                            Compostela el 8 de julio de 2002, entre sus
+                            fundadores hoy se mantienen vigentes los
+                            productores: <span class="font-bold"
+                                >Seferino Corporan, Manuel Sención, Justino
+                                Crespo.</span
+                            > Entre los objetivos de su fundación primo la unificación
+                            de los pequeños y medianos productores de banano
+                            ofertando mejores opciones en la comercialización
+                            de sus productos, otros de nuestros objetivos es
+                            la protección del medio ambiente contribuyendo así
+                            con la reforestación de nuestra región y mejorar
+                            el entorno de nuestras áreas agrícolas y proteger
+                            nuestra ecología.
+                        </p>
+                        <p>
+                            En nuestro inicio empezamos a exportar a través
+                            de Savid Dominicana C.X.A. con una producción de
+                            2,800 cajas semanales equivalentes a 3
+                            contenedores semanales. El espíritu de
+                            crecimiento de nuestros socios nos ha hecho
+                            trabajar incansablemente y hoy en día exportamos
+                            entre 5,000 y 6,000 cajas semanales
+                            equivalenetes a 6 contenedores. Iniciamos con
+                            una matrícula de 16 miembros y hoy día tenemos
+                            46 lo que demuestra un crecimiento significativo
+                            y aumento de volumen exportando.
+                        </p>
+                    </article>
+                </article>
+            </div>
+        </section>
+        <section class="">
+            <div class="max-w-screen-xl min-w-0 mx-auto">
+                <MVVCard />
+            </div>
+        </section>
+        <div class="banner relative">
+            <section
+                class="pb-32 pt-14 lg:pt-32 sm:pt-20 relative overflow-x-hidden"
+            >
+                <div class="flex flex-col items-center">
+                    <h1 class="mb-10 px-4 text-center capitalize">
+                        Nuestro <span class="font-bold text-green-500">equipo</span>
+                        dedicado
+                    </h1>
+                    <p class="max-w-3xl px-8 text-center text-xl font-light">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sapiente corrupti <b>ratione assumenda</b>, reiciendis
+                        adipisci sit nulla minus fuga nostrum, ialiquid ducimus?
+                        Veritatis harum doloribus.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <section>
+            <div class="container-about min-h-screen py-12">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-5xl px-4 mb-8 font-medium text-gray-200">
+                        ¡Nuestro <span class="text-green-500 font-bold"
+                            >Equipo!</span>
+                    </h2>
+                    <p class="px-8 text-center text-xl mx-auto text-gray-100">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Perferendis, tempora?
+                    </p>
+                </div>
+                <div
+                    class="grid max-w-screen-xl mx-auto min-w-0 px-4 mt-12 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <AboutUsCard />
+                    <AboutUsCard />
+                    <AboutUsCard />
+                    <AboutUsCard />
+                    <AboutUsCard />
+                    <AboutUsCard />
+                    <div
+                        class="bg-gray-50 lg:col-span-3 sm:col-span-2 col-span-1 shadow-2xl rounded-xl"
+                    >
+                        <div class="flex flex-1 flex-col lg:flex-row min-h-0">
+                            <div
+                                class="flex-1 overflow-hidden max-h-96 lg:max-h-96"
+                            >
+                                <img
+                                    src="/perfil.jpg"
+                                    class="w-full h-full object-cover"
+                                    alt="imagen-acerda-de-nosotros"
+                                />
+                            </div>
+                            <div class="flex-1 p-6 flex flex-col gap-6">
+                                <h5>Azuabana</h5>
+                                <div
+                                    class="before:float-right before:h-1 before:w-32"
+                                >
+                                    <h2
+                                        class="text-3xl lg:text-4xl font-semibold"
+                                    >
+                                        Nuestro equipo de desarrollo
+                                    </h2>
+                                </div>
+                                <p class="tracking-wide">
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Facilis at fugit
+                                    laboriosam quibusdam quam nam ullam iusto,
+                                    minima natus placeat fuga nostrum, tempora
+                                    deleniti qui harum molestiae doloribus odio
+                                    recusandae temporibus eos ad ab explicabo
+                                    delectus eum. Maiores vitae aperiam eos
+                                    unde, magnam quibusdam earum assumenda
+                                    tempora quae facere ipsam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layaout>
+
+<style>
+    .container-about {
+        background: var(--color5);
+    }
+
+    .banner {
+        background: url("/bg-banner.jpeg") no-repeat fixed;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        opacity: 50;
+        background-blend-mode: soft-light;
+        background-color: rgba(0, 0, 0, 0.8);
+        clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+    }
+
+    .banner h1 {
+        font-size: 50px;
+        max-width: 12ch;
+    }
+
+    .banner p {
+        line-height: 1.7;
+    }
+
+    @media (min-width: 640px) {
+        .banner h1 {
+            max-width: 20ch;
+        }
+
+        .banner {
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .banner h1 {
+            font-size: 62px;
+        }
+    }
+</style>
